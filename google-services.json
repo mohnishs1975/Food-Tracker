@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "749901571350",
+    "firebase_url": "https://samplebarcode-26ada-default-rtdb.firebaseio.com",
+    "project_id": "samplebarcode-26ada",
+    "storage_bucket": "samplebarcode-26ada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749901571350:android:ee27734f3e7663ff23dc37",
+        "android_client_info": {
+          "package_name": "com.Sands.ReaderApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749901571350-e3icc1pboudvl6pf2lq5b4naki95vb8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcRxg_rre0IfdVtq5VSsMwaBajKSjjXRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749901571350-e3icc1pboudvl6pf2lq5b4naki95vb8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
