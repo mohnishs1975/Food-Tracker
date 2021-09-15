@@ -6,7 +6,6 @@ import Colors from '../utils/colors';
 import useStatusBar from '../hooks/useStatusBar';
 import { logout } from '../components/Firebase/firebase';
 
-
 export default function HomeScreen({navigation}) {
   useStatusBar('dark-content');
   async function handleSignOut() {

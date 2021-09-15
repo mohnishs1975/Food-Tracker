@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase'
 import 'firebase/firestore';
+import Colors from '../utils/colors';
+
 
 
 let addItem = item => {
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     padding: 30,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#6565fc',
+    backgroundColor: Colors.mediumGrey,
   },
   title: {
     marginBottom: 20,
