@@ -12,7 +12,7 @@ import 'firebase/firestore';
 
 
 let addItem = item => {
-  firebase.database().ref('/items').set({
+  firebase.database().ref('/items').push({
     name: item,
   });
 };

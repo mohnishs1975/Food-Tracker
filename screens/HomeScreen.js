@@ -26,7 +26,7 @@ export default function HomeScreen({navigation}) {
         <AppButton
           title="View/Edit Recipes"
           color="secondary"
-          onPress={() => navigation.navigate('SignOut')}
+          onPress={() => navigation.navigate('ViewRecipes')}
         />
         <AppButton
           title="Sign Out"
