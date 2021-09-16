@@ -1,17 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, Button, Alert, TextInput, TouchableHighlight } from 'react-native';
-import { BarCodeScanner } from 'expo-barcode-scanner';
-import * as firebase from 'firebase'
+import { Text, View, StyleSheet, Button } from 'react-native';
 
-let addItem = item => {
-    firebase.database().ref('/items').push({
-      name: item,
-    });
-  };
+import { BarcodeScanner } from 'expo-barcode-scanner';
 
-export default function Scanner() {
+export default function Scanner( {navigation} ) {
   const [hasPermission, setHasPermission] = useState(null);
-  const [name, onChangeText] = React.useState('');
   const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
@@ -20,11 +13,6 @@ export default function Scanner() {
       setHasPermission(status === 'granted');
     })();
   }, []);
-
-  const handleSubmit = () => {
-    addItem(name);
-    Alert.alert('Item saved successfully');
-  };
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
