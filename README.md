@@ -16,6 +16,3 @@ Frontend:
 
 2. Successful API call with FDA
 3. Successful API call with gmail authenticator
-
-Tasks Done:
-Mohnish: Firebase Authentication, Firebase Data Storage/Retreival, React-Native Screens, App navigation
