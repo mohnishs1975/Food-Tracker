@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Text, View, StyleSheet, Button, Alert, TextInput, TouchableHighlight } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import * as firebase from 'firebase'
@@ -12,6 +13,13 @@ let addItem = item => {
 export default function Scanner() {
   const [hasPermission, setHasPermission] = useState(null);
   const [name, onChangeText] = React.useState('');
+=======
+import { Text, View, StyleSheet, Button } from 'react-native';
+import { BarCodeScanner } from 'expo-barcode-scanner';
+
+export default function Scanner( {navigation} ) {
+  const [hasPermission, setHasPermission] = useState(null);
+>>>>>>> 915f02261b68344cf7312ad9d45b39e9b7a41572
   const [scanned, setScanned] = useState(false);
 
   useEffect(() => {
@@ -21,16 +29,29 @@ export default function Scanner() {
     })();
   }, []);
 
+<<<<<<< HEAD
   const handleSubmit = () => {
     addItem(name);
     Alert.alert('Item saved successfully');
   };
 
+=======
+>>>>>>> 915f02261b68344cf7312ad9d45b39e9b7a41572
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
     console.log(str);
+<<<<<<< HEAD
+=======
+    //additem
+  };
+
+  let addItem = item => {
+    firebase.database().ref('/items').push({
+      name: item,
+    });
+>>>>>>> 915f02261b68344cf7312ad9d45b39e9b7a41572
   };
 
   const fda_api = () => {

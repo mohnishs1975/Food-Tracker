@@ -30,7 +30,7 @@ export default function AddRecipes() {
 
   const foodSearch = () => {
     alert(`Bar code number with data ${name} has been found!`);
-    str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + name;
+    str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
     addItem(str);
     Alert.alert('Item saved successfully');
   };
