@@ -6,7 +6,6 @@ import Colors from '../utils/colors';
 import useStatusBar from '../hooks/useStatusBar';
 import { logout } from '../components/Firebase/firebase';
 
-
 export default function HomeScreen({navigation}) {
   useStatusBar('dark-content');
   async function handleSignOut() {
@@ -22,8 +21,8 @@ export default function HomeScreen({navigation}) {
         <Image source={require('../assets/food.png')} style={styles.logo} />
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton title="New Recipe" onPress={() => navigation.navigate('AddRecipes')} />
-        <AppButton title="Scan Your Food" onPress={() => navigation.navigate('Scanner')} />
+        <AppButton title="Manually Add Recipe" onPress={() => navigation.navigate('AddRecipes')} />
+        <AppButton title="Scan to Add Recipe" onPress={() => navigation.navigate('Scanner')} />
         <AppButton
           title="View/Edit Recipes"
           color="secondary"

@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import ItemComponent from '../components/ItemComponent';
 import * as firebase from 'firebase'
+import Colors from '../utils/colors';
 
 let itemsRef = firebase.database().ref('/items');
 
@@ -30,6 +31,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#ebebeb',
+    backgroundColor: Colors.mediumGrey,
   },
 });
