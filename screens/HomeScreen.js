@@ -23,6 +23,7 @@ export default function HomeScreen({navigation}) {
       </View>
       <View style={styles.buttonContainer}>
         <AppButton title="New Recipe" onPress={() => navigation.navigate('AddRecipes')} />
+        <AppButton title="Scan Your Food" onPress={() => navigation.navigate('Scanner')} />
         <AppButton
           title="View/Edit Recipes"
           color="secondary"
