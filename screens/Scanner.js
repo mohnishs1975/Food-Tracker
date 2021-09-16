@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
-
-import { BarcodeScanner } from 'expo-barcode-scanner';
+import { BarCodeScanner } from 'expo-barcode-scanner';
 
 export default function Scanner( {navigation} ) {
   const [hasPermission, setHasPermission] = useState(null);
@@ -19,6 +18,13 @@ export default function Scanner( {navigation} ) {
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
     console.log(str);
+    //additem
+  };
+
+  let addItem = item => {
+    firebase.database().ref('/items').push({
+      name: item,
+    });
   };
 
   const fda_api = () => {
