@@ -17,3 +17,12 @@ Frontend:
 Backend: 
 1. Successful API call with FDA https://fdc.nal.usda.gov/api-guide.html
 2. Successful API call with gmail authenticator
+
+
+
+
+
+API Architure: 
+
+
+<img width="409" alt="Screen Shot 2021-09-16 at 18 31 46" src="https://user-images.githubusercontent.com/90277008/133693983-1f915466-d48b-4794-933f-7ed3e7fe42a2.png">
