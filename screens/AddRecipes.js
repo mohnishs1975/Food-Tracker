@@ -58,7 +58,7 @@ export default function AddRecipes() {
       <TouchableHighlight
         style={styles.button}
         underlayColor="white"
-        onPress={foodSearch}>
+        onPress={handleSubmit}>
         <Text style={styles.buttonText}>Add</Text>
       </TouchableHighlight>
     </View>
