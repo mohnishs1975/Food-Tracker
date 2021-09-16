@@ -21,7 +21,8 @@ export default function HomeScreen({navigation}) {
         <Image source={require('../assets/food.png')} style={styles.logo} />
       </View>
       <View style={styles.buttonContainer}>
-        <AppButton title="New Recipe" onPress={() => navigation.navigate('AddRecipes')} />
+        <AppButton title="Manually Add Recipe" onPress={() => navigation.navigate('AddRecipes')} />
+        <AppButton title="Scan to Add Recipe" onPress={() => navigation.navigate('Scanner')} />
         <AppButton
           title="View/Edit Recipes"
           color="secondary"

@@ -13,6 +13,7 @@ import Colors from '../utils/colors';
 
 
 
+
 let addItem = item => {
   firebase.database().ref('/items').push({
     name: item,
@@ -26,6 +27,27 @@ export default function AddRecipes() {
     addItem(name);
     Alert.alert('Item saved successfully');
   };
+
+  const foodSearch = () => {
+    alert(`Bar code number with data ${name} has been found!`);
+    str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
+    addItem(str);
+    Alert.alert('Item saved successfully');
+  };
+
+  const fda_api = () => {
+    return fetch(str)
+      .then((response) => response.json())
+      .then((json) => {
+        return json.nutrientNumber;
+      })
+  }
+
+  const calories = fda_api;
+  const TextInANest = () => {
+    const [titleText, setTitleText] = useState("Calories:");
+    const bodyText = calories;
+  }
   return (
     <View style={styles.main}>
       <Text style={styles.title}>Add Item</Text>
@@ -36,7 +58,7 @@ export default function AddRecipes() {
       <TouchableHighlight
         style={styles.button}
         underlayColor="white"
-        onPress={handleSubmit}>
+        onPress={foodSearch}>
         <Text style={styles.buttonText}>Add</Text>
       </TouchableHighlight>
     </View>
