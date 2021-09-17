@@ -32,7 +32,8 @@ export default function Scanner( {navigation} ) {
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
     console.log(str);
-    addItem(calories);
+
+    //additem
   };
 
   let addItem = item => {
@@ -42,14 +43,14 @@ export default function Scanner( {navigation} ) {
 
   };
 
-  const calories = () => {
+  const fda_api = () => {
     return fetch(str)
       .then((response) => response.json())
       .then((json) => {
         return json.nutrientNumber;
       })
   }
-/*
+  const calories = fda_api;
   const TextInANest = () => {
     const [titleText, setTitleText] = useState("Calories:");
     const bodyText = calories;
@@ -66,7 +67,7 @@ export default function Scanner( {navigation} ) {
       </Text>
     );
   };
- */ 
+  
   if (hasPermission === null) {
     return <Text>Requesting for camera permission</Text>;
   }
