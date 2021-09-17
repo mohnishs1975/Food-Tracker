@@ -18,32 +18,7 @@ export default function Scanner( {navigation} ) {
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
     str = 'https://api.nal.usdCCa.gov/fdc/v1/foods/search?api_key=DEMO_KEY&query=' + id;
     console.log(str);
-    writeUserData(id, name, calories)
-  };
-  const name = () => {
-    return fetch(str)
-      .then((response) => response.json())
-      .then((json) => {
-        return json.description;
-      })
-  }  
-  
-  const calories = () => {
-    return fetch(str)
-      .then((response) => response.json())
-      .then((json) => {
-        return json.nutrientNumber;
-      })
-  }
-  function writeUserData(id, name, calories) {
-    firebase.database().ref('users/' + userId).set({
-      name: name,
-      calories: calories
-    });
-  }
-
-
-
+     
 
   const calories = fda_api;
   const TextInANest = () => {
