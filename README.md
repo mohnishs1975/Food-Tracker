@@ -16,7 +16,8 @@ Frontend:
 
 Backend: 
 1. Successful API call with FDA https://fdc.nal.usda.gov/api-guide.html
-2. Successful API call with gmail authenticator
+2. Successful API call with gmail authenticator 
+3. Successful use of Firebase https://firebase.google.com/docs/firestore/library-integrations
 
 Things Learned and Done:
 
