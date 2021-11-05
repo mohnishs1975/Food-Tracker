@@ -1,4 +1,4 @@
-# SW-Mini-Project
+# Food Tracker
 
 
 # Agile Workflow
